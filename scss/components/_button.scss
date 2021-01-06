@@ -1,0 +1,81 @@
+.btn {
+    &--white {
+        background-color: $col-neutral-light;
+        color: $col-neutral-dark;
+
+        &::after { background-color: $col-neutral-light; }
+    }
+    
+    &--animated {
+        animation: move-in-bottom 1s ease-out .75s backwards;
+        -webkit-animation: move-in-bottom 1s ease-out .75s backwards;
+    }
+
+    &:link,
+    &:visited {
+        position: relative;
+        display: inline-block;
+        padding: 15px 40px;
+        text-transform: uppercase;
+        text-decoration: none;
+        border: none;
+        border-radius: 100px;
+        -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
+        -ms-border-radius: 100px;
+        -o-border-radius: 100px;
+        transition: transform .2s ease-out, box-shadow .2s ease-out;
+        -webkit-transition: transform .2s ease-out, box-shadow .2s ease-out;
+        -moz-transition: transform .2s ease-out, box-shadow .2s ease-out;
+        -ms-transition: transform .2s ease-out, box-shadow .2s ease-out;
+        -o-transition: transform .2s ease-out, box-shadow .2s ease-out;
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+        -webkit-transform: translateY(-3px);
+        -moz-transform: translateY(-3px);
+        -ms-transform: translateY(-3px);
+        -o-transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    &:active {
+        transform: translateY(-1px);
+        -webkit-transform: translateY(-1px);
+        -moz-transform: translateY(-1px);
+        -ms-transform: translateY(-1px);
+        -o-transform: translateY(-1px);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 100px;
+        -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
+        -ms-border-radius: 100px;
+        -o-border-radius: 100px;
+        z-index: -1;
+        transition: transform .4s ease-out, opacity .4s ease-out;
+        -webkit-transition: transform .4s ease-out, opacity .4s ease-out;
+        -moz-transition: transform .4s ease-out, opacity .4s ease-out;
+        -ms-transition: transform .4s ease-out, opacity .4s ease-out;
+        -o-transition: transform .4s ease-out, opacity .4s ease-out;
+    }
+    
+    &:hover::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        -webkit-transform: scaleX(1.4) scaleY(1.6);
+        -moz-transform: scaleX(1.4) scaleY(1.6);
+        -ms-transform: scaleX(1.4) scaleY(1.6);
+        -o-transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+    }
+}
