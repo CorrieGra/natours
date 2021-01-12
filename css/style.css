@@ -290,6 +290,41 @@ body {
     -ms-transform: scale(0.9);
     -o-transform: scale(0.9); }
 
+.feature-box {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+  border-radius: 2.5px;
+  -webkit-border-radius: 2.5px;
+  -moz-border-radius: 2.5px;
+  -ms-border-radius: 2.5px;
+  -o-border-radius: 2.5px;
+  transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+  -moz-transition: all .2s ease-in;
+  -ms-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; }
+  .feature-box__icon {
+    margin-bottom: .5rem;
+    font-size: 6rem;
+    background: linear-gradient(to right, #7ed56f, #28b485);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text; }
+  .feature-box__text {
+    height: 15rem; }
+  .feature-box:hover {
+    transform: translateY(-5px) scale(1.05);
+    -webkit-transform: translateY(-5px) scale(1.05);
+    -moz-transform: translateY(-5px) scale(1.05);
+    -ms-transform: translateY(-5px) scale(1.05);
+    -o-transform: translateY(-5px) scale(1.05); }
+
 .row {
   max-width: 114rem;
   margin: 0 auto;
@@ -351,3 +386,21 @@ body {
   background-color: #f7f7f7;
   padding: 25rem 0;
   margin-top: -20vh; }
+
+.section-features {
+  margin-top: -8.26rem;
+  padding: 20rem 0;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/nat-4.jpg");
+  background-size: cover;
+  background-position: top;
+  transform: skewY(-7deg);
+  -webkit-transform: skewY(-7deg);
+  -moz-transform: skewY(-7deg);
+  -ms-transform: skewY(-7deg);
+  -o-transform: skewY(-7deg); }
+  .section-features > * {
+    transform: skewY(7deg);
+    -webkit-transform: skewY(7deg);
+    -moz-transform: skewY(7deg);
+    -ms-transform: skewY(7deg);
+    -o-transform: skewY(7deg); }
