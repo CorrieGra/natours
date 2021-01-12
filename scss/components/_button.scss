@@ -3,9 +3,20 @@
         background-color: $col-neutral-light;
         color: $col-neutral-dark;
 
-        &::after { background-color: $col-neutral-light; }
+        &::after {
+            background-color: $col-neutral-light;
+        }
     }
-    
+
+    &--green {
+        background-color: $col-primary-light;
+        color: #ffffff;
+
+        &::after {
+            background-color: $col-primary-light;
+        }
+    }
+
     &--animated {
         animation: move-in-bottom 1s ease-out .75s backwards;
         -webkit-animation: move-in-bottom 1s ease-out .75s backwards;
@@ -69,7 +80,7 @@
         -ms-transition: transform .4s ease-out, opacity .4s ease-out;
         -o-transition: transform .4s ease-out, opacity .4s ease-out;
     }
-    
+
     &:hover::after {
         transform: scaleX(1.4) scaleY(1.6);
         -webkit-transform: scaleX(1.4) scaleY(1.6);
@@ -81,6 +92,7 @@
 }
 
 .btn--text {
+
     &:link,
     &:visited {
         display: inline-block;
@@ -94,7 +106,7 @@
         -moz-transition: all .2s ease-out;
         -ms-transition: all .2s ease-out;
         -o-transition: all .2s ease-out;
-}
+    }
 
     &:hover {
         color: white;
@@ -105,7 +117,7 @@
         -moz-transform: translateY(-2px);
         -ms-transform: translateY(-2px);
         -o-transform: translateY(-2px);
-}
+    }
 
     &:active {
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.15);
@@ -114,5 +126,5 @@
         -moz-transform: translateY(-1px);
         -ms-transform: translateY(-1px);
         -o-transform: translateY(-1px);
-}
+    }
 }
