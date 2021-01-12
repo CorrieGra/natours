@@ -1,6 +1,43 @@
 .row { 
-    max-width: $grid-width; 
-    background-color: rgb(190, 190, 190);
+    max-width: $grid-width;
+    margin: 0 auto; 
+    &:not(:last-child) { margin-bottom: $vertical-gutter; }
+    @include clearfix;
 
-    &:not(:last-child) { margin: 0 auto $vertical-gutter auto; }
+    /************************
+     *  Attribute selector  *
+     ************************
+     *  ^ = start           *
+     *  $ = end             *
+     *  * = containing      *
+     ************************/
+
+    [class^="col-"] {
+        float: left;
+        &:not(:last-child) { margin-right: $horizontal-gutter; }
+    }
+
+    .col-1-of-2 {
+        width: calc((100% - #{$horizontal-gutter}) / 2);
+    }
+
+    .col-1-of-3 {
+        width: calc((100% - (#{$horizontal-gutter} * 2)) / 3);
+    }
+
+    .col-2-of-3 {
+        width: calc(2 * ((100% - (#{$horizontal-gutter} * 2)) / 3) + #{$horizontal-gutter});
+    }
+
+    .col-1-of-4 {
+        width: calc((100% - (#{$horizontal-gutter} * 3)) / 4);
+    }
+
+    .col-2-of-4 {
+        width: calc(2 * ((100% - (#{$horizontal-gutter} * 3)) / 4) + #{$horizontal-gutter});
+    }
+
+    .col-3-of-4 {
+        width: calc(3 * ((100% - (#{$horizontal-gutter} * 3)) / 4) + (#{$horizontal-gutter} * 2));
+    }
 }

@@ -23,3 +23,42 @@
         -webkit-animation: move-in-right 1s ease-out backwards;
     }
 }
+
+.heading-secondary {
+    display: inline-block;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-image: linear-gradient(to right, $col-primary-light, $col-primary-dark);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: transform .2s;
+    -webkit-transition: transform .2s;
+    -moz-transition: transform .2s;
+    -ms-transition: transform .2s;
+    -o-transition: transform .2s;
+    letter-spacing: .2rem;
+    cursor: default;
+
+    &:hover {
+        transform: skewY(2deg) skewX(15deg);
+        -webkit-transform: skewY(2deg) skewX(15deg);
+        -moz-transform: skewY(2deg) skewX(15deg);
+        -ms-transform: skewY(2deg) skewX(15deg);
+        -o-transform: skewY(2deg) skewX(15deg);
+        text-shadow: .5rem 1rem 2rem rgba(0, 0, 0, .2);
+    }
+}
+
+.heading-tertiary {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph { 
+    font-size: $default-font-size;
+
+    &:not(:last-child){ margin-bottom: 1.3rem; }
+}
