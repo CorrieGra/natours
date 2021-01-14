@@ -1,0 +1,118 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(#000000, .85);
+    z-index: 110;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+
+    // If the url has the id of the element e.g. #popup, this class will be available
+    &:target {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &:target &__content {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+        -webkit-transform: translate(-50%, -50%) scale(1);
+        -moz-transform: translate(-50%, -50%) scale(1);
+        -ms-transform: translate(-50%, -50%) scale(1);
+        -o-transform: translate(-50%, -50%) scale(1);
+}
+
+    &__content {
+        display: table;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include center-both-axis(-50%,-50%);
+
+        width: 80%;
+        margin: 0 auto;
+        background-color: #ffffff;
+        box-shadow: 0 2rem 4rem rgba(#000000, .2);
+
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -o-border-radius: 3px;
+
+        overflow: hidden;
+        opacity: 0;
+
+        transform: translate(-50%, -50%) scale(.5);
+        -webkit-transform: translate(-50%, -50%) scale(.5);
+        -moz-transform: translate(-50%, -50%) scale(.5);
+        -ms-transform: translate(-50%, -50%) scale(.5);
+        -o-transform: translate(-50%, -50%) scale(.5);
+
+        transition: all .4s .2s ease;
+        -webkit-transition: all .4s .2s ease;
+        -moz-transition: all .4s .2s ease;
+        -ms-transition: all .4s .2s ease;
+        -o-transition: all .4s .2s ease;
+}
+
+    &__left {
+        display: table-cell;
+        width: 33.3333333333333333333%;
+    }
+
+    &__right {
+        display: table-cell;
+        width: 66.6666666666666666667%;
+        padding: 3rem 5rem;
+        vertical-align: middle;
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+    }
+
+    &__text {
+        font-size: 1.4rem;
+        margin-bottom: 4rem;
+        column-count: 2;
+        column-gap: 4rem;
+        column-rule: 1px solid $col-grey-light-2;
+        hyphens: auto;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+    }
+
+    &__close {
+
+        &:link,
+        &:visited {
+            position: absolute;
+            top: 2.5rem;
+            right: 2.5rem;
+            font-size: 3rem;
+            text-decoration: none;
+            display: inline-block;
+            color: inherit;
+            line-height: 1;
+            transition: all .2s ease;
+            -webkit-transition: all .2s ease;
+            -moz-transition: all .2s ease;
+            -ms-transition: all .2s ease;
+            -o-transition: all .2s ease;
+        }
+
+        &:hover {
+            color: $col-primary-light;
+        }
+    }
+}

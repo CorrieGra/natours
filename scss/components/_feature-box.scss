@@ -20,6 +20,10 @@
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
 
+    @include responsivenessForA(tablet-in-portrait) {
+        padding: 2rem;
+    }
+
     &__icon {
         margin-bottom: .5rem;
         font-size: 6rem;
@@ -27,6 +31,10 @@
         color: transparent;
         background-clip: text;
         -webkit-background-clip: text;
+
+        @include responsivenessForA(tablet-in-portrait) {
+            margin: 0;
+        }
     }
 
     &__text {

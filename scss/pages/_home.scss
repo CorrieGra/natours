@@ -2,6 +2,10 @@
     background-color: $col-grey-light-1;
     padding: 25rem 0;
     margin-top: -20vh;
+
+    @include responsivenessForA(tablet-in-portrait){
+        padding: 20rem 0;
+    }
 }
 
 .section-features {
@@ -23,10 +27,62 @@
         -ms-transform: skewY(7deg);
         -o-transform: skewY(7deg);
     }
+
+    @include responsivenessForA(tablet-in-portrait){
+        padding: 10rem 0;
+    }
 }
 
 .section-tours {
     background-color: $col-grey-light-1;
     padding: 25rem 0 15rem 0;
     margin-top: -8.25rem;
+
+    @include responsivenessForA(tablet-in-portrait){
+        padding: 20rem 0 10rem 0;
+    }
+}
+
+.section-stories {
+    position: relative;
+    padding: 15rem 0;
+
+    @include responsivenessForA(tablet-in-portrait){
+        padding: 10rem 0;
+    }
+}
+
+.section-book {
+    padding: 15rem 0;
+    background-image: linear-gradient(to right bottom, $col-primary-light, $col-primary-dark);
+
+    @include responsivenessForA(tablet-in-portrait){
+        padding: 10rem 0;
+    }
+}
+
+.book {
+    background: linear-gradient(105deg, rgba(#fff, .9) 0%, rgba(#fff, .9) 50%, transparent 50%), url('../img/nat-10.jpg') no-repeat center top / 100%;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, .25);
+
+    @include responsivenessForA(tablet-in-landscape) {
+        background: linear-gradient(105deg, rgba(#fff, .9) 0%, rgba(#fff, .9) 65%, transparent 65%), url('../img/nat-10.jpg') no-repeat center top / cover;
+    }
+
+    @include responsivenessForA(tablet-in-portrait) {
+        background: linear-gradient(to right, rgba(#fff, .9) 0%, rgba(#fff, .9) 100%), url('../img/nat-10.jpg') no-repeat center top / cover;
+    }
+
+    &__form {
+        width: 50%;
+        padding: 6rem;
+
+        @include responsivenessForA(tablet-in-landscape) { width: 65%; }
+        @include responsivenessForA(tablet-in-portrait) { width: 100%; }
+    }
 }

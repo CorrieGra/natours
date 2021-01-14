@@ -1,0 +1,84 @@
+.footer {
+    padding: 10rem 0;
+    font-size: 1.4rem;
+    color: $col-grey-light-1;
+    background-color: $col-grey-dark-2;
+
+    @include responsivenessForA(tablet-in-portrait) {
+        padding: 8rem 0;
+    }
+
+    &__logo-box {
+        text-align: center;
+        margin-bottom: 8rem;
+
+        @include responsivenessForA(tablet-in-portrait){ margin-bottom: 6rem; }
+    }
+
+    &__logo {
+        width: 15rem;
+        height: auto;
+    }
+
+    &__navigation {
+        display: inline-block;
+        padding-top: 2rem;
+        border-top: 1px solid $col-grey-dark-1;
+
+        @include responsivenessForA(tablet-in-portrait) {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        display: inline-block;
+
+        &:not(:last-child) {
+            margin-right: 1.5rem;
+        }
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            display: inline-block;
+            color: inherit;
+            background-color: $col-grey-dark-2;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: all .2s ease-out;
+            -webkit-transition: all .2s ease-out;
+            -moz-transition: all .2s ease-out;
+            -ms-transition: all .2s ease-out;
+            -o-transition: all .2s ease-out;
+        }
+
+        &:hover,
+        &:active {
+            color: $col-primary-light;
+            box-shadow: 0 1rem 2rem rgba(#000000, .4);
+            transform: rotate(5deg) scale(1.3);
+            -webkit-transform: rotate(5deg) scale(1.3);
+            -moz-transform: rotate(5deg) scale(1.3);
+            -ms-transform: rotate(5deg) scale(1.3);
+            -o-transform: rotate(5deg) scale(1.3);
+        }
+    }
+
+    &__copyright {
+        width: 80%;
+        float: right;
+        padding-top: 2rem;
+        border-top: 1px solid $col-grey-dark-1;
+
+        @include responsivenessForA(tablet-in-portrait) {
+            width: 100%;
+            float: none;
+        }
+    }
+}

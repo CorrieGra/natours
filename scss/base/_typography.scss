@@ -7,20 +7,29 @@
 
     &--main {
         display: block;
-        font-size: 60px;
+        font-size: 6rem;
         font-weight: 400;
         letter-spacing: 35px;
         animation: move-in-left 1s ease-out backwards;
         -webkit-animation: move-in-left 1s ease-out backwards;
+
+        @include responsivenessForA(phone) {
+            letter-spacing: 1rem;
+            font-size: 5rem;
+        }
     }
 
     &--sub {
         display: block;
-        font-size: 20px;
+        font-size: 2rem;
         font-weight: 700;
-        letter-spacing: 17.4px;
+        letter-spacing: 1.75rem;
         animation: move-in-right 1s ease-out backwards;
         -webkit-animation: move-in-right 1s ease-out backwards;
+
+        @include responsivenessForA(phone) {
+            letter-spacing: .5rem;
+        }
     }
 }
 
@@ -40,6 +49,14 @@
     -o-transition: transform .2s;
     letter-spacing: .2rem;
     cursor: default;
+
+    @include responsivenessForA(tablet-in-portrait) {
+        font-size: 3rem;
+    };
+
+    @include responsivenessForA(phone) {
+        font-size: 2.5rem;
+    };
 
     &:hover {
         transform: skewY(2deg) skewX(15deg);

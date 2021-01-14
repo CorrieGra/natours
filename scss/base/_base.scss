@@ -7,7 +7,24 @@
 }
 
 html {
-    font-size: 10px;
+    // DEFINES WHAT !REM IS 
+    font-size: 62.5%;
+
+    /*
+     *  If You Want 1 rem to be = 8px in a media query
+     *  divide the pixel you want by the default 16px and use that as percentage
+     *  8 / 16px = 50%
+     */ 
+    //  responsivenessForA(tablent-in-portrait) will work for both phones and tablets
+    @include responsivenessForA(tablet-in-portrait){
+        font-size: 50%; // 1 rem should be 10px -> 10 / 16 = 62.5%
+    }
+    @include responsivenessForA(tablet-in-landscape){
+        font-size: 56.25%; // 1 rem should be 9 -> 9 / 16 = 56.25%
+    }
+    @include responsivenessForA(big-monitor){
+        font-size: 75%; // 1 rem should be 12 -> 12 / 16 = 75%
+    }
 }
 
 body {
@@ -16,4 +33,8 @@ body {
     line-height: 1.7;
     padding: 30px;
     color: $col-neutral-dark;
+
+    @include responsivenessForA(tablet-in-portrait){
+        padding: 0; //
+    }
 }
