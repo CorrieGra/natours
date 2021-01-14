@@ -1157,6 +1157,9 @@ body {
     -moz-transition: all .4s ease-out;
     -ms-transition: all .4s ease-out;
     -o-transition: all .4s ease-out; }
+    @media (max-width: 56.25em) {
+      .navigation__link:link, .navigation__link:visited {
+        font-size: 2rem; } }
   .navigation__link:hover, .navigation__link:active {
     background-position: 100%;
     color: #28b485;
