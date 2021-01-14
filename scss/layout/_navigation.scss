@@ -92,7 +92,6 @@
     }
 
     &__link {
-
         &:link,
         &:visited {
             display: inline-block;
@@ -109,6 +108,10 @@
             -moz-transition: all .4s ease-out;
             -ms-transition: all .4s ease-out;
             -o-transition: all .4s ease-out;
+
+            @include responsivenessForA(tablet-in-portrait) {
+                font-size: 2rem;
+            }
         }
 
         &:hover,
